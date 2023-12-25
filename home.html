@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-dark text-light">
+    <div class="container my-5 d-flex flex-column">
+        <nav class="d-flex justify-content-between">
+            <h1>Home page</h1>
+        <button type="button" onclick="logOut()" id="signOut" class="btn btn-outline-light">
+            Log Out
+        </button>
+        </nav>
+        <h1 id="myh1" class="mt-5"></h1>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        let myh1 = document.getElementById("myh1");
+        myh1.innerHTML = `Welcome Home ${currentUser.name}`
+    </script>
+</body>
+
+</html>

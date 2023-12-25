@@ -1,0 +1,14 @@
+.carousel-inner .carousel-item img {
+    width: 100%;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: teal ;
+}
+
+.carousel-indicators {
+    bottom: -70px;
+}
