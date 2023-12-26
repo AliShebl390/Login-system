@@ -7,19 +7,26 @@
     <title>Home</title>
     <script src="js/auth.js"></script>
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="bg-dark text-light">
-    <div class="container my-5 d-flex flex-column">
-        <nav class="d-flex justify-content-between">
-            <h1>Home page</h1>
+<body class="home-container">
+    <nav class="bg-body-secondary">
+        <div class="d-flex justify-content-between py-4 container">
+            <h3>Home page</h3>
         <button type="button" onclick="logOut()" id="signOut" class="btn btn-outline-light">
             Log Out
         </button>
-        </nav>
-        <h1 id="myh1" class="mt-5"></h1>
+        </div>
+    </nav>
+    <div class="container home-body">
+        <div class="layer"></div>
+        <div class="home-content">
+            <h1 id="myh1" class="text-center"></h1>
+            <img src="images/giphy.gif" alt="">
+        </div>
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>

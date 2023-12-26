@@ -6,26 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="bg-dark">
-    <div class="container mt-5 d-flex flex-column">
-        <h1 class="text-white text-center">Login</h1>
+<body>
+    <div class="container login-body">
+        <div class="row login-container">
+            <div class="col-12 col-md-7 left-side">
+
+            </div>
+            <div class="col-12 col-md-5 right-side">
+                <h1 class="text-center">Login</h1>
         <form action="" class="form">
             <div  class="mt-3 group-input">
-                <label class="mb-1 text-white" for="logEmail">Your Email:</label>
+                <label class="mb-1 text-black" for="logEmail">Email</label>
                 <input id="logEmail" type="email" class="form-control ">
             </div>
             <div  class="mt-3 group-input">
-                <label class="mb-1 text-white" for="logPassword">Your Password:</label>
+                <label class="mb-1 text-black" for="logPassword"> Password</label>
                 <input id="logPassword" type="password" class="form-control ">
             </div>
-            <button type="button" id="login" onclick="logUser()" class="btn btn-outline-light px-4 mt-3">Login</button>
-            <a href="index.html" class="btn btn-outline-light px-4 ms-2 mt-3">Register</a>
+            <button type="button" id="login" onclick="logUser()" class="btn btn-outline-dark px-4 mt-3">Login</button>
+            <a href="index.html" class="btn btn-outline-dark px-4 mt-3">Register</a>
 
         </form>
+
+            </div>
+        </div>
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>

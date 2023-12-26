@@ -1,14 +1,289 @@
-.carousel-inner .carousel-item img {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+
+
+:root {}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Login page */
+.login-body {
+    display: grid;
+    justify-items: center;
+    align-items: center;
     width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.carousel-indicators [data-bs-target] {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: teal ;
+.login-container {
+    width: 100%;
+    height: 80%;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.carousel-indicators {
-    bottom: -70px;
+.login-container .left-side {
+    background-image: url(../images/12892978_5101874.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
+
+.login-container .right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0px 100px 0px 50px;
+    margin-top: -80px;
+}
+
+.login-container .right-side .btn {
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+    width: 100%;
+    padding: 10px 0;
+}
+
+.login-container .right-side .btn:hover {
+    color: white;
+    border: none;
+    background-position: right center;
+}
+
+.right-side .form-control:focus {
+    border-color: #59E4A8;
+    box-shadow: 0 0 0 0.25rem #8ED6EF;
+}
+
+.right-side h1 {
+    color: #1B2E35;
+    font-family: 'Caveat', cursive;
+    letter-spacing: 5px;
+}
+
+
+/* Media query for login page */
+@media only screen and (max-width: 767px) {
+    .login-body {
+        width: 100%;
+        height: 90vh;
+    }
+
+    .login-container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .login-container .right-side {
+        padding: 50px;
+    }
+
+    .login-container .left-side {
+        margin-top: 50px;
+    }
+}
+
+/* End Media query for login page */
+/* End Login page */
+/* Register Page */
+.register-body {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.register-container {
+    width: 100%;
+    height: 80%;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.register-container .left-side {
+    background-image: url(../images/reg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.register-container .right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0px 50px 0px 50px;
+    margin-top: -80px;
+}
+
+.register-container .right-side .btn {
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+    width: 100%;
+    padding: 10px 0;
+}
+
+.register-container .right-side .btn:hover {
+    color: white;
+    border: none;
+    background-position: right center;
+}
+
+.right-side .form-control:focus {
+    border-color: #59E4A8;
+    box-shadow: 0 0 0 0.25rem #8ED6EF;
+}
+
+.right-side h1 {
+    color: #1B2E35;
+    font-family: 'Caveat', cursive;
+    letter-spacing: 5px;
+}
+
+
+/* Media query for register page */
+@media only screen and (max-width: 767px) {
+    .register-body {
+        width: 100%;
+        flex-direction: column-reverse;
+        height: 90vh;
+    }
+
+    .register-container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .register-container .right-side {
+        padding: 0px 50px;
+        height: 75%;
+    }
+
+    .register-container .left-side {
+        order: -1;
+        height: 20%;
+    }
+}
+
+/* End ofRegister Page */
+/* Home Page */
+.home-body {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 90px);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.home-content {
+    width: 100%;
+    height: 75vh;
+    z-index: 5;
+    position: relative;
+    border-radius: 1rem;
+    display: grid;
+    place-items: center;
+
+    background: hsla(152, 68%, 90%, 1);
+    background: linear-gradient(90deg, hsla(152, 68%, 90%, 1) 31%, hsla(105, 11%, 85%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(152, 68%, 90%, 1) 31%, hsla(105, 11%, 85%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(152, 68%, 90%, 1) 31%, hsla(105, 11%, 85%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#D5F7E7", endColorstr="#D8DED6", GradientType=1);
+}
+
+.home-container .layer {
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.514);
+}
+
+.home-container nav {
+    z-index: 5;
+    position: relative;
+    background: hsla(152, 68%, 90%, 1);
+    background: linear-gradient(90deg, hsla(152, 68%, 90%, 1) 31%, hsla(105, 11%, 85%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(152, 68%, 90%, 1) 31%, hsla(105, 11%, 85%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(152, 68%, 90%, 1) 31%, hsla(105, 11%, 85%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#D5F7E7", endColorstr="#D8DED6", GradientType=1);
+}
+
+nav .btn {
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+    padding: 8px 15px;
+}
+
+nav .btn:hover {
+    color: white;
+    border: none;
+    background-position: right center;
+}
+
+nav h3 {
+    color: #1B2E35;
+    font-family: 'Caveat', cursive;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.home-content img {
+    margin-top: -180px;
+    width: 40%;
+}
+
+.home-content h1 {
+    font-family: 'Caveat', cursive;
+    letter-spacing: 8px;
+    text-transform: capitalize;
+}
+
+/* Media query for home page */
+@media only screen and (max-width: 767px) {
+    .home-body {
+        width: 100%;
+        height: calc(90vh - 90px);
+    }
+    
+    .home-content {
+        width: 100%;
+        height: 65vh;
+    }
+    .home-content img {
+        margin-top: -180px;
+        width: 80%;
+    }
+}
+/* End of Page */
