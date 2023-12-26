@@ -6,6 +6,8 @@ let logPassword = document.querySelector("#logPassword");
 let regBtn = document.querySelector("#register");
 let signBtn = document.querySelector("#login");
 let signOut = document.querySelector("#signOut");
+let emailAlert = document.querySelector("#emailAlert")
+let loginAlert = document.querySelector("#loginAlert")
 let users = [];
 if (localStorage.getItem("userData") !== null) {
     users = JSON.parse(localStorage.getItem("userData"));
@@ -15,19 +17,33 @@ if (localStorage.getItem("currentUser") !== null) {
 }
 
 
-
+function emailCheck(emailToCheck) {
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].email === emailToCheck) {
+            return true; // Email already exists
+        }
+    }
+    return false; // Email does not exist
+}
 function addUser() {
     if (validateregName() && validateregEmail() && validateregPass()) {
-        let user = {
-            name: userName.value,
-            password: userPassword.value,
-            email: userEmail.value,
-        };
-        users.push(user);
-        localStorage.setItem("userData", JSON.stringify(users));
-        location.href = "login.html";
+        const userEnteredEmail = userEmail.value;
+        
+        if (!emailCheck(userEnteredEmail)) {
+            let user = {
+                name: userName.value,
+                password: userPassword.value,
+                email: userEnteredEmail,
+            };
+            users.push(user);
+            localStorage.setItem("userData", JSON.stringify(users));
+            location.href = "login.html";
+        } else {
+            emailAlert.classList.remove("d-none")
+            emailAlert.classList.add("d-block")
+        }
     } else {
-        regAlert.show()
+        regAlert.show();
     }
 }
 
@@ -46,6 +62,9 @@ function logUser() {
             localStorage.setItem("userData", JSON.stringify(users));
             location.href = "home.html";
             return;
+        } else {
+            loginAlert.classList.add("d-block")
+            loginAlert.classList.remove("d-none")
         }
     }
 }
@@ -94,6 +113,12 @@ function validateregPass() {
         return false
     }
 }
+
+
+
+
+
+
 
 // logPassword.addEventListener("input",validateSignPass)
 // function validateSignPass() {

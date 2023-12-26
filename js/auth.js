@@ -1,7 +1,7 @@
 if (localStorage.getItem("currentUser") !== null) {
     currentUser = JSON.parse(localStorage.getItem("currentUser"));
 } else {
-    location.replace('index.html')
+    location.replace('login.html')
 }
 
 document.addEventListener("DOMContentLoaded", function () {
