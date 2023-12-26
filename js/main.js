@@ -108,30 +108,4 @@ function validateregPass() {
     }
 }
 
-// logPassword.addEventListener("input",validateSignPass)
-// function validateSignPass() {
-//     let LogPassRegax = /^.{6,}$/
-//     if (LogPassRegax.test(logPassword.value)) {
-//         logPassword.classList.add("is-valid")
-//         logPassword.classList.remove("is-invalid")
-//         return true
-//     } else {
-//         logPassword.classList.remove("is-valid")
-//         logPassword.classList.add("is-invalid")
-//         return false
-//     }
-// }
 
-// logEmail.addEventListener("input",validateSignEmail)
-// function validateSignEmail() {
-//     let LogEmailRegax = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-//     if (LogEmailRegax.test(logEmail.value)) {
-//         logEmail.classList.add("is-valid")
-//         logEmail.classList.remove("is-invalid")
-//         return true
-//     } else {
-//         logEmail.classList.remove("is-valid")
-//         logEmail.classList.add("is-invalid")
-//         return false
-//     }
-// }
