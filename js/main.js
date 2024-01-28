@@ -47,8 +47,7 @@ function addUser() {
 }
 
 function logUser() {
-    const userIndex = users.findIndex((user) => user.email === logEmail.value &&
-    user.password === logPassword.value);
+    var userIndex = users.findIndex((user) => user.email === logEmail.value && user.password === logPassword.value);
     if (userIndex !== -1) {
         let currentUser = {
             email: logEmail.value,
